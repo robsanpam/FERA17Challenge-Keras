@@ -422,13 +422,13 @@ def create_dataset(orig_db_path="~", # Path to original db
 def main(argv):
     create_dataset(orig_db_path=str(argv[0]),
                    main_dir=str(argv[1]),
-                   target_h=str(argv[2]), 
-                   target_w=str(argv[3]),
-                   view=str(argv[4]),
-                   skips=str(argv[5]), 
-                   pack=str(argv[6]),
-                   grayscale=str(argv[7]),
-                   label_index=str(argv[8]))
+                   target_h=int(argv[2]), 
+                   target_w=int(argv[3]),
+                   view=int(argv[4]),
+                   skips=int(argv[5]), 
+                   pack=int(argv[6]),
+                   grayscale=bool(argv[7]),
+                   label_index=int(argv[8]))
 
 if __name__ == "__main__":
     main(sys.argv[1:])    
